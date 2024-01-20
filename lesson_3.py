@@ -47,7 +47,7 @@ mi = SmartPhone("note 10", ["MegaCom", "O!"], "500 Mach")
 # mi.info()
 # mi._gallery()
 mi.password()
-print(mi.model)
+print(mi.sim_cards)
 print(mi._battery)
 print(mi.sim_cards)
 
@@ -70,5 +70,3 @@ def private(value):
 @private
 def hello():
     print("WTF!!!")
-
-hello()

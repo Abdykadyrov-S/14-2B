@@ -88,3 +88,5 @@ mers = Car("bmw - m5", 2022)
 print(bmw)
 
 print(bmw + mers)
+
+print("test")
