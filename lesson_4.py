@@ -69,24 +69,75 @@ class Car:
 
     def __str__(self): # __str__ == print
         return f"бренд - {self.model},\n год выпуска - {self.year} это str"
-        return "Hello world"
+        # return "Hello world"
     
     # def __repr__(self): # __repr__ == print
     #     return f"бренд - {self.model}, год выпуска - {self.year} это repr"
 
+    def __call__(self, a, b):
+        print(a + b)
+
 
     # Магисесие методы для арифметических действий
 
-    def __add__(self, other):
+    def __add__(self, other): # +
         res = self.year + other.year
         return Car(self.model, res)
 
+    def __sub__(self, other): # -
+        res = self.year - other.year
+        return Car(self.model, res)
+    
+    def __mul__(self, other): # *
+        res = self.year * other.year
+        return Car(self.model, res)
+    
+    def __floordiv__(self, other): # //
+        res = self.year // other.year
+        return Car(self.model, res)
+    
+    def __truediv__(self, other): # /
+        res = self.year / other.year
+        return Car(self.model, res)
+    
+    # Магические методы для операторов сравнения
+    def __gt__(self, other): # больше чем (>) - greater than
+        return self.year > other.year
+    
+    def __lt__(self, other): # меньше чем (<) - less than
+        return self.year < other.year
+    
+    def __eq__(self, other): # равно (==) - equals
+        return self.year == other.year
+    # "=" - Знак присваивания
+    # "==" - Знак равенства
+
+    def __ne__(self, other): # не равно (!=) - not equals
+        return self.year != other.year
+    
+    def __ge__(self, other): # больше или равно (>=) - greater or equals
+        return self.year >= other.year
+    
+    def __le__(self, other): # меньше или равно (<=) - less or equals
+        return self.year <= other.year
     
 bmw = Car("bmw - m5", 2022)
-mers = Car("bmw - m5", 2022)
+mers = Car("bmw - m5", 2023)
+# mers(2, 2)
 # bmw.info()
 print(bmw)
+# Магисесие методы для арифметических действий
+# print(bmw + mers)
+# print(bmw - mers)
+# print(bmw * mers)
+# print(bmw / mers)
+# print(bmw // mers)
 
-print(bmw + mers)
 
-print("test")
+# Магические методы для операторов сравнения
+print(bmw > mers)
+print(bmw < mers)
+print(bmw == mers)
+print(bmw != mers)
+print(bmw >= mers)
+print(bmw <= mers)
