@@ -1,2 +1,4 @@
 config.py
 secret/secret_key.py
+.env
+venv

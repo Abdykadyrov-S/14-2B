@@ -20,3 +20,7 @@
 
 # from secret.public_key import *
 # print(password)
+
+from secret.test.test import test
+
+print(test)
