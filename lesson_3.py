@@ -21,7 +21,7 @@ bmw.info()
 class SmartPhone:
     def __init__(self, model, sim_cards, battery):
         self.model = model # Публичный атрибут
-        self._battery = battery
+        self._battery = battery 
         self.__sim_cards = sim_cards
 
     @property

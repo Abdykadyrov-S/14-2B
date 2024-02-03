@@ -5,6 +5,7 @@ class Car: # чертеж
     #  __init__ - Конструктор, инструкция
     # self - сам объект
     # self.brand = атрибут/поле/свойства объекта
+    wheels = 4 # атрибут/поле/свойства класса
     def __init__(self, brand, year, color):
         self.brand = brand
         self.year = year
